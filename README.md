@@ -7,6 +7,7 @@ graph TD;
     0((Start))-->10[Get vital item];
     0-->20[Nothing];
     10-->100((Guard));
+    20-->100;
     100-->110[Evade];
     100-->120[Fight];
     110-->200((Check has vital item));
