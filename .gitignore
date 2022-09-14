@@ -31,3 +31,6 @@
 *.out
 *.app
 *.pro.user
+Makefile
+mlpack_example_2
+.qmake.stash

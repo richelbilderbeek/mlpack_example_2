@@ -7,3 +7,5 @@ LIBS += -lmlpack
 
 SOURCES += \
         main.cpp
+
+QMAKE_CXXFLAGS += -fopenmp
