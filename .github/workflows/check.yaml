@@ -1,0 +1,38 @@
+on:
+  push:
+  pull_request:
+
+name: check
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2
+
+      - name: Install libmlpack-dev
+        run: sudo apt-get install libmlpack-dev
+
+      - name: Install libensmallen-dev
+        run: sudo apt-get install libensmallen-dev
+
+      #- name: Install Codecov
+      #  run: sudo pip install codecov
+
+      - name: qmake
+        run: qmake mlpack_example_2.pro
+
+      - name: make
+        run: make debug --silent
+
+      - name: run
+        run: ./mlpack_example_2
+
+      #- name: Measure codecov
+      #  run: |
+      #    ./get_code_cov.sh
+      #    codecov
+      #    bash <(curl -s https://codecov.io/bash)
