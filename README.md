@@ -1,6 +1,6 @@
-# mlplack_example_2
+# mlpack_example_2
 
-mlpack example 2: Q learning
+[mlpack example](https://github.com/richelbilderbeek/mlpack_examples) 2: Q learning.
 
 ```mermaid
 graph TD;
