@@ -1,6 +1,10 @@
 #include <mlpack/core.hpp>
 #include <mlpack/methods/reinforcement_learning/q_learning.hpp>
 
+int main()
+{
+}
+
 /*
 #include <mlpack/core.hpp>
 #include <mlpack/methods/ann/ffn.hpp>
@@ -17,10 +21,8 @@ using namespace mlpack;
 using namespace mlpack::ann;
 using namespace ens;
 using namespace mlpack::rl;
-*/
 
-/*
-//#include <mlpack/methods/reinforcement_learning/policy/greedy_policy.hpp>
+#include <mlpack/methods/reinforcement_learning/policy/greedy_policy.hpp>
 
 struct action
 {
@@ -40,12 +42,7 @@ struct state
 
 int main()
 {
-  //mlpack::rl::GreedyPolicy<environment> policy(1.0, 1000, 0.1);
-
+  mlpack::rl::GreedyPolicy<environment> policy(1.0, 1000, 0.1);
 
 }
 */
-
-int main()
-{
-}
