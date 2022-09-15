@@ -34,3 +34,4 @@
 Makefile
 mlpack_example_2
 .qmake.stash
+Makefile.*
