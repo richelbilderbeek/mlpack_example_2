@@ -1,5 +1,8 @@
 # mlpack_example_2
 
+ * See ['relearn' example 1](https://github.com/richelbilderbeek/relearn_example_1)
+   for the same problem using [the relearn library](https://github.com/alexge233/relearn)
+
 [mlpack example](https://github.com/richelbilderbeek/mlpack_examples) 2: Q learning.
 
 ```mermaid
