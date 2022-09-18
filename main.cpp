@@ -1,5 +1,7 @@
+#pragma GCC diagnostic ignored "-Wshadow"
 #include <mlpack/core.hpp>
 #include <mlpack/methods/reinforcement_learning/q_learning.hpp>
+#pragma GCC diagnostic pop
 
 int main()
 {
