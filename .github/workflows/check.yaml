@@ -20,12 +20,14 @@ jobs:
         run: |
           cd ..
           git clone https://github.com/mlpack/mlpack --depth 1
-          cd mlpack
-          mkdir mlpackbuild && cd build/
-          cmake ../
-          sudo make install          
-          cd ../../
-          cd mlpack_example_2
+          cd -
+          # No need to build it
+          # cd mlpack
+          # mkdir mlpackbuild && cd build/
+          # cmake ../
+          # sudo make install          
+          # cd ../../
+          # cd mlpack_example_2
 
       - name: Install libcereal-dev
         run: sudo apt install libcereal-dev
