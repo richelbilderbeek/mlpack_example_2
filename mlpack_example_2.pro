@@ -19,9 +19,12 @@ CONFIG(debug, debug|release) {
   QMAKE_CXXFLAGS += -Werror
 }
 
-LIBS += -lmlpack
+SOURCES += main.cpp
 
-SOURCES += \
-        main.cpp
-
+# mlpack is unpacked in a sister folder
+INCLUDEPATH = $$PWD/../mlpack/src
+# mlpack enjoys this flag
 QMAKE_CXXFLAGS += -fopenmp
+
+# Don't use apt-get to install mlpack, see https://github.com/mlpack/mlpack/issues/3274
+# LIBS += -lmlpack

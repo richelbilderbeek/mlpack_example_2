@@ -13,8 +13,22 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
 
-      - name: Install libmlpack-dev
-        run: sudo apt-get install libmlpack-dev
+      #- name: Install libmlpack-dev, DON'T! See https://github.com/mlpack/mlpack/issues/3274
+      #  run: sudo apt-get install libmlpack-dev
+
+      - name: Install libmlpack-dev from source, see https://github.com/mlpack/mlpack/issues/3274
+        run: |
+          cd ..
+          git clone https://github.com/mlpack/mlpack --depth 1
+          cd mlpack
+          mkdir mlpackbuild && cd build/
+          cmake ../
+          sudo make install          
+          cd ../../
+          cd mlpack_example_2
+
+      - name: Install libcereal-dev
+        run: sudo apt install libcereal-dev
 
       - name: Install libensmallen-dev
         run: sudo apt-get install libensmallen-dev
