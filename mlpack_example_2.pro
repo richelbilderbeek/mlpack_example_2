@@ -7,7 +7,9 @@ CONFIG += c++17
 QMAKE_CXXFLAGS += -std=c++17
 
 # High warning levels
-QMAKE_CXXFLAGS += -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic
+QMAKE_CXXFLAGS += -Wall -Wextra -Wshadow -Wnon-virtual-dtor 
+# Not now, as mlpack has a fix by me that is merged, but not yet on master
+# -pedantic
 
 # Debug and release settings
 CONFIG += debug_and_release
