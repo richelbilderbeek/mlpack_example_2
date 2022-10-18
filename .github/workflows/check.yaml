@@ -29,11 +29,11 @@ jobs:
           # cd ../../
           # cd mlpack_example_2
 
-      - name: Install libcereal-dev
-        run: sudo apt install libcereal-dev
+      #- name: Install libcereal-dev
+      #  run: sudo apt install libcereal-dev
 
-      - name: Install libensmallen-dev
-        run: sudo apt-get install libensmallen-dev
+      #- name: Install libensmallen-dev
+      #  run: sudo apt-get install libensmallen-dev
 
       #- name: Install Codecov
       #  run: sudo pip install codecov
