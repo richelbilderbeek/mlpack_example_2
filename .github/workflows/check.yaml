@@ -13,6 +13,9 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
 
+      - name: Install Armadillo
+        run: sudo apt-get install libarmadillo-dev
+
       #- name: Install libmlpack-dev, DON'T! See https://github.com/mlpack/mlpack/issues/3274
       #  run: sudo apt-get install libmlpack-dev
 
